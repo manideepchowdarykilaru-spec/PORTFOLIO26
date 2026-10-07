@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Welcome to my Portfolio - Developer & Craftsman">
+    <title>Welcome to My Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pure-black">
+
+    <!-- Preloader Screen -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner"></div>
+            <div class="preloader-logo">MANIDEEP CHOWDARY<span></span></div>
+            <div class="preloader-progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="preloader-text" id="preloaderPercent">0%</div>
+        </div>
+    </div>
+
+    <!-- Background Glow & Stars -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="top-header" id="topHeader">
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo">
+                <span class="logo-main">MANIDEEP CHOWDARY<span class="dot"></span></span>
+
+            </a>
+
+            <!-- Top Right Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">HOME</a></li>
+                    <li><a href="#hero" class="nav-link">HERO</a></li>
+                    <li><a href="#about" class="nav-link">ABOUT</a></li>
+                    <li><a href="#education" class="nav-link">EDUCATION</a></li>
+                    <li><a href="#skills" class="nav-link">SKILLS</a></li>
+                    <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                    <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu" aria-controls="navMenu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- 1. HOME SECTION (3D Laptop Screen Showcase) -->
+        <section id="home" class="section home-section">
+            <div class="home-container">
+                <!-- Laptop Mockup Display (Reference Image Match) -->
+                <div class="laptop-wrapper">
+                    <!-- One shared 3D space: lid and body are two planes joined
+                         at a hinge, tilted so you look down on the machine -->
+                    <div class="laptop-3d">
+                        <!-- Lid, hinged on its bottom edge, two-sided -->
+                        <div class="laptop-lid">
+                            <div class="laptop-screen">
+                                <div class="laptop-camera"></div>
+                                <div class="screen-content">
+                                    <!-- Main Bold Heading -->
+                                    <div class="hero-welcome-box">
+                                        <h1 class="welcome-top">WELCOME TO MY</h1>
+                                        <h1 class="welcome-bottom">PORTFOLIO</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Outer shell: what you see while it is shut -->
+                            <div class="laptop-lid-shell" aria-hidden="true"></div>
+                        </div>
+                        <!-- Body: a real horizontal deck for the lid to close onto.
+                             Every row below totals 14.5 key units, which is what
+                             keeps the columns lining up the way a real board does. -->
+                        <div class="laptop-deck" aria-hidden="true">
+                            <div class="laptop-hinge"></div>
+                            <div class="mb-keyboard">
+                                <div class="mb-row mb-row-fn">
+                                    <span class="k w15"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k"></span>
+                                </div>
+                                <div class="mb-row">
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k w15"></span>
+                                </div>
+                                <div class="mb-row">
+                                    <span class="k w15"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                </div>
+                                <div class="mb-row">
+                                    <span class="k w175"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k w175"></span>
+                                </div>
+                                <div class="mb-row">
+                                    <span class="k w225"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k w225"></span>
+                                </div>
+                                <div class="mb-row mb-row-base">
+                                    <span class="k"></span><span class="k"></span><span class="k"></span>
+                                    <span class="k w125"></span>
+                                    <span class="k w5"></span>
+                                    <span class="k w125"></span>
+                                    <span class="k"></span>
+                                    <span class="mb-arrows">
+                                        <span class="k"></span>
+                                        <span class="mb-arrows-col"><span class="k"></span><span class="k"></span></span>
+                                        <span class="k"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="laptop-trackpad"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 2. HERO SECTION -->
+        <section id="hero" class="section hero-section">
+            <div class="container hero-container">
+                <div class="section-badge">01. INTRO</div>
+                <div class="hero-split-layout">
+                    <div class="hero-left-content">
+                        <h1 class="hero-name">MANIDEEP<br><span class="hero-name-accent">CHOWDARY</span></h1>
+                    </div>
+                    <div class="hero-center-photo">
+                    <div class="hero-photo-stack" id="heroPhotoStack">
+                        <img src="faces/face-00.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-01.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-02.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-03.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-04.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-05.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-06.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-07.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-08.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-09.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-10.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-11.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-12.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-13.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-14.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-15.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-16.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-17.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-18.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-19.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-20.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-21.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-22.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-23.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-24.webp" alt="Manideep Chowdary" class="hero-photo-frame is-active" fetchpriority="high" draggable="false">
+                        <img src="faces/face-25.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-26.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-27.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-28.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-29.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-30.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-31.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-32.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-33.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-34.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-35.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-36.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-37.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-38.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-39.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-40.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-41.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-42.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-43.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-44.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-45.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-46.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-47.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                        <img src="faces/face-48.webp" alt="" aria-hidden="true" class="hero-photo-frame" draggable="false">
+                    </div>
+                        <p class="hero-drag-hint" id="heroDragHint"><i class="fa-solid fa-arrows-left-right"></i>Drag to move</p>
+                    </div>
+                    <div class="hero-right-spacer"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-badge">02. ABOUT ME</div>
+                <h2 class="section-title">PASSION FOR EXCELLENCE</h2>
+                <div class="about-grid">
+                    <div class="about-text glass-card">
+                        <h3>Hi, I'm a passionate Web Developer and AIML Enthusiast</h3>
+                        <p>I am an enthusiastic B.Tech Computer Science student with a strong work ethic and excellent
+                            organizational skills, eager to contribute to a reputed organization through disciplined
+                            problem-solving and continuous learning.</p>
+                        <p>Dedicated to supporting organizational goals while growing into a versatile professional.</p>
+
+                        <div class="about-meta">
+                            <div class="meta-item">
+                                <span class="meta-title">Location:</span> Global / Remote
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-title">Role:</span> Full-Stack Web Craftsman
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-title">Status:</span> Open for opportunities
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 4. EDUCATION SECTION -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-badge">03. ACADEMICS</div>
+                <h2 class="section-title">EDUCATION & QUALIFICATIONS</h2>
+                <div class="timeline">
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-year">Expected May 2028</div>
+                        <h3 class="timeline-title">B.Tech in Computer Science and Engineering</h3>
+                        <div class="timeline-sub">SRKR Engineering College, Bhimavaram, Andhra Pradesh</div>
+                        <p>CGPA: 8.5/10</p>
+                    </div>
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-year">2022 – 2024</div>
+                        <h3 class="timeline-title">Intermediate (MPC)</h3>
+                        <div class="timeline-sub">SASI Junior College, Kamavarapukota</div>
+                        <p>Percentage: 98.5%</p>
+                    </div>
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-year">2022</div>
+                        <h3 class="timeline-title">Secondary School Certificate</h3>
+                        <div class="timeline-sub">SASI English Medium High School, Eluru</div>
+                        <p>Completed Secondary Education with excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SKILLS SECTION -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-badge">04. TECH STACK</div>
+                <h2 class="section-title">SKILLS & CAPABILITIES</h2>
+                <div class="skills-grid">
+                    <div class="skill-card glass-card">
+                        <div class="skill-header">
+                            <span class="skill-name">Frontend Architecture</span>
+                            <span class="skill-pct">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-fill" style="width: 95%;"></div>
+                        </div>
+                        <p class="skill-desc">HTML5, CSS3, JavaScript (ES6+), React, Vue, Canvas 2D/WebGL</p>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-header">
+                            <span class="skill-name">Backend Development</span>
+                            <span class="skill-pct">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-fill" style="width: 88%;"></div>
+                        </div>
+                        <p class="skill-desc">Node.js, Express, REST APIs, Python, Microservices</p>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-header">
+                            <span class="skill-name">UI/UX & Design</span>
+                            <span class="skill-pct">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-fill" style="width: 92%;"></div>
+                        </div>
+                        <p class="skill-desc">Figma, Glassmorphism, Micro-Animations, Responsive Design</p>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-header">
+                            <span class="skill-name">DevOps & Tools</span>
+                            <span class="skill-pct">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="bar-fill" style="width: 85%;"></div>
+                        </div>
+                        <p class="skill-desc">Git, GitHub Actions, Docker, Vercel, Webpack/Vite</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PROJECTS SECTION -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-badge">05. SHOWCASE</div>
+                <h2 class="section-title">FEATURED PROJECTS</h2>
+                <div class="projects-grid">
+                    <div class="project-card glass-card">
+                        <div class="project-img-placeholder">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>NextGen E-Commerce Platform</h3>
+                            <p>High performance storefront with real-time state, dark glass interface, and instant
+                                checkout flow.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>CSS3</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card">
+                        <div class="project-img-placeholder">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>AI Analytics Dashboard</h3>
+                            <p>Real-time data visualization dashboard featuring 60fps canvas charts and telemetry tools.
+                            </p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>Canvas API</span>
+                                <span>ChartJS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card">
+                        <div class="project-img-placeholder">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>3D Interactive Workspace</h3>
+                            <p>Immersive 3D interactive web workspace with custom shader effects and particle fields.
+                            </p>
+                            <div class="project-tags">
+                                <span>WebGL</span>
+                                <span>Three.js</span>
+                                <span>CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-badge">06. CONNECT</div>
+                <h2 class="section-title">GET IN TOUCH</h2>
+                <div class="contact-grid">
+                    <div class="contact-info glass-card">
+                        <h3>Let's build something extraordinary together</h3>
+                        <p>I am available for freelance work, full-time positions.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:manideepchowdarykilaru@gmail.com" style="color: inherit; text-decoration: none;">manideepchowdarykilaru@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+919392066954" style="color: inherit; text-decoration: none;">+91 9392066954</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Available</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/manideepchowdarykilaru-spec" target="_blank"
+                                rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/manideep-chowdary-kilaru-19186835b/" target="_blank"
+                                rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form glass-card" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required
+                                placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-blue btn-full">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2026 PORTFOLIO • Built with pure black style & high performance code.</p>
+        </div>
+    </footer>
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toastMsg">Action triggered successfully!</span>
+    </div>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
